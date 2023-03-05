@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   double _h = double.parse(_heightController.text);
                   double _w = double.parse(_weightController.text);
                   setState(() {
-                    _bmiResult = _w / (_h * _h);
+                    _bmiResult = (_w / (_h * _h)) * 10000;
                     if(_bmiResult > 25){
                       _textResult = "You\'re over weight";
                     } else if(_bmiResult >= 18.5 && _bmiResult <= 25){
